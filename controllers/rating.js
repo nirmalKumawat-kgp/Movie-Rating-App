@@ -11,6 +11,7 @@ exports.newRating = async (req, res, next) => {
 
   try {
     let rating = await Rating.findOne({ movie: movieId, author: userId });
+    console.log(rating);
     //rating of that movie by particular user is already given
     if (rating) {
       return next(new ErrorResponse("Rating Already Exists", 400));

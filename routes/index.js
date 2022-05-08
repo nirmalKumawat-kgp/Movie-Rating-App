@@ -1,6 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
-router.use("/api/auth", require("./auth")); // auth routes are kept in auth.js
+//all routes realted to authentication and authorization
+router.use("/api/auth", require("./auth"));
+
+// segregation of routes based on their model
 router.use("/api/rating", require("./rating"));
+
+router.use("/api/movie/", require("./movie"));
+
 module.exports = router;
