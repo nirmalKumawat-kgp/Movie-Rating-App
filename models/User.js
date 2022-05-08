@@ -36,6 +36,7 @@ const UserSchema = new Schema({
     required: true,
   },
   ratings: [{ type: Schema.Types.ObjectId, ref: "Rating" }],
+  favouriteMovies: [{ type: Schema.Types.ObjectId, ref: "Movie" }],
 });
 //hashing password before saving to database
 

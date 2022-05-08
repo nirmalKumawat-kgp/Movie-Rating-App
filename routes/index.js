@@ -9,4 +9,5 @@ router.use("/api/rating", require("./rating"));
 
 router.use("/api/movie/", require("./movie"));
 
+router.use("/api/user/", require("./user"));
 module.exports = router;

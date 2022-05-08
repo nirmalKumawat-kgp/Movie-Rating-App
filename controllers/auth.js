@@ -49,6 +49,15 @@ exports.login = async (req, res, next) => {
 
       await user.save();
 
+      //if user logs in for first-time then redirect to profile to add favorite movies
+
+      if (!user.lastLogin) {
+        sendToken(
+          user,
+          "Redirect to /user/profile on client side to add favorite movies",
+          res
+        );
+      }
       sendToken(user, "Logged In Successfully", res);
     }
   } catch (error) {

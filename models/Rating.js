@@ -7,15 +7,23 @@ const RatingSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "User",
       required: true,
+      index: true,
     },
     movie: {
       type: Schema.Types.ObjectId,
       ref: "Movie",
+      index: true,
     },
     rating: {
       type: Number,
       required: true,
     },
+    history: [
+      {
+        rating: Number,
+        createdAt: Date,
+      },
+    ],
   },
   {
     timestamps: true,

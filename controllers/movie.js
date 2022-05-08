@@ -13,7 +13,7 @@ const client = new Client({
 });
 
 exports.searchMovie = async (req, res, next) => {
-  const query = req.query.q;
+  const query = req.query.q; //extracting search query from query parameters
   try {
     //refreshing the index before searching
     await client.indices.refresh({ index: "movies" });
