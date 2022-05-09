@@ -6,7 +6,7 @@ This is an example of how you may give instructions on setting up your project l
 <br>
 1. Clone the repo
    ```sh
-   git clone https://github.com/tsg-iitkgp/tsg-backend.git
+   git clone https://github.com/nirmalKumawat-kgp/Movie-Rating-App.git
    ```
 2. Install NPM packages
    ```sh
