@@ -5,3 +5,7 @@ This repositroy contains the backend built with ExpressJs framework using MongoD
 
 **`npm start`** - to start with node server.js <br>
 **`npm run dev`** - to start with nodemon server.js
+
+Add the following details in **`config.env`** <br>
+ - JWT_SECRET_KEY = paste your jwt secret here
+
