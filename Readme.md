@@ -1,5 +1,10 @@
 # Movie Rating App Backend
 This repositroy contains the backend built with ExpressJs framework using MongoDB as database. To provide search results of movie Elastic Search is used.
+<br>
+This project has been built with the following technologies.
+* [Expressjs](https://expressjs.com/)
+* [MongoDB Atlas](https://www.mongodb.com/atlas)
+* [ElasticCloud](https://www.elastic.co/cloud/)
 
 ## Getting Started
 This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
