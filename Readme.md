@@ -8,4 +8,7 @@ This repositroy contains the backend built with ExpressJs framework using MongoD
 
 Add the following details in **`config.env`** <br>
  - JWT_SECRET_KEY = paste your jwt secret here
-
+ - JWT_EXPIRES_IN = duration after which JWT expires
+ - DATABASE_CONNECTION_URL = link to mongoDB database
+ - ELASTIC_CLOUD_ID = cloud id of your elasticCloud deployment
+ - ELASTIC_API_KEY = You elastic cloud API key
