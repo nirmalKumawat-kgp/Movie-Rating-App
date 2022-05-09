@@ -3,5 +3,5 @@ This repositroy contains the backend built with ExpressJs framework using MongoD
 
 ## Usage
 
-`npm start` - to start with node server.js <br>
-`npm run dev` - to start with nodemon server.js
+**`npm start`** - to start with node server.js <br>
+**`npm run dev`** - to start with nodemon server.js
