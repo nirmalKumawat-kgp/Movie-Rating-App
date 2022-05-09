@@ -30,10 +30,10 @@ Add the following details in **`config.env`** <br>
  - ELASTIC_API_KEY = You elastic cloud API key
 ## EndPoints
 The following are endpoints to fetch required details (`http://localhost:PORT/`) : <br>
- * `POST` `/api/auth/login` - to authenticate user and login
- * `POST` `/api/auth/signup` - to create a new user
- * `GET` `/api/auth/logout` - to logout user
- * `GET` `/api/movie/search` - to search for movie provided query paramerter `q`
- * `POST` `/api/rating/` - to add a new rating provided with `moviedId` in body
- * `PUT` `/api/rating/:ratingId` - to edit a rating
- * `POST` `/api/user/favourtieMovies` - to add favourite movies to user profile on first login
+ * `POST`  `/api/auth/login` - to authenticate user and login
+ * `POST`  `/api/auth/signup` - to create a new user
+ * `GET`   `/api/auth/logout` - to logout user
+ * `GET`   `/api/movie/search` - to search for movie provided query paramerter `q`
+ * `POST`  `/api/rating/` - to add a new rating provided with `moviedId` in body
+ * `PUT`   `/api/rating/:ratingId` - to edit a rating
+ * `POST`  `/api/user/favourtieMovies` - to add favourite movies to user profile on first login
