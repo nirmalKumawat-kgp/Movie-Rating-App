@@ -19,8 +19,6 @@ const errorHandler = (err, req, res, next) => {
     error = new ErrorResponse(message, 400);
   }
 
-  console.log(`Error Handler : ${error.message}`);
-
   //if a statusCode is passed then its sent else 500
   res.status(error.statusCode || 500).json({
     success: false,

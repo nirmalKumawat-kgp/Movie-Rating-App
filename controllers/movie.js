@@ -1,7 +1,7 @@
 require("dotenv").config({ path: "../config.env" });
 const { Client } = require("@elastic/elasticsearch");
 const Movie = require("../models/Movie");
-
+const Rating = require("../models/Rating");
 //connecting to elastic cloud
 const client = new Client({
   cloud: {
@@ -42,8 +42,15 @@ exports.searchMovie = async (req, res, next) => {
 
     //creating array of movies after finding them in mongoDB database
     const movies = await Promise.all(
-      result.hits.hits.map(async (movie, index) => {
-        return await Movie.findOne({ title: movie._source.title });
+      result.hits.hits.map(async (item, index) => {
+        const movie = await Movie.findOne({ title: item._source.title });
+        const averageRating = await movie.getAverageRating();
+        return {
+          _id: movie._id,
+          title: movie.title,
+          ratings: movie.ratings,
+          averageRating: averageRating,
+        };
       })
     );
 

@@ -17,11 +17,13 @@ const RatingSchema = new Schema(
     rating: {
       type: Number,
       required: true,
+      max: 5,
     },
     history: [
       {
         rating: Number,
         createdAt: Date,
+        version: Number,
       },
     ],
   },

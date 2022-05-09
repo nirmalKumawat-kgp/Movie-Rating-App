@@ -4,10 +4,13 @@ const movieData = require("../Movies2K");
 const mongoose = require("mongoose");
 const initData = async () => {
   try {
-    await mongoose.connect(process.env.DATABASE_CONNECTION_URL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(
+      "mongodb+srv://nirmalKumawat:nirmal1025@cluster0.boixd.mongodb.net/movieRatingApp?retryWrites=true&w=majority",
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
+    );
 
     console.log("Connection to database established");
   } catch (error) {
